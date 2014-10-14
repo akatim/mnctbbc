@@ -7,11 +7,17 @@ html
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
 
-nav.navbar.bavbar-default
+nav.navbar.navbar-default
   .container-fluid
     .navbar-header
       a.navbar-brand
-        | brand
+        = link_to "宮城高専吹奏楽部OB会", root_path
+    .collapse.navbar-collapse#bs-example-navbar-collapse-1
+      ul.nav.navbar-nav
+        li
+          = link_to "イベント情報", events_path
+        li
+          = link_to "掲示板", articles_path
 
 .container
   .row

@@ -4,14 +4,13 @@ h1
   .panel.panel-default
     .panel-heading
       h4
-        = article.title
+        | #{article.id} : #{article.title}
       br
-      | 投稿者：
-      = article.name
+      | 投稿者：#{article.name}
     .panel-body
-      = article.body
+      = simple_format(article.body)
     .panel-footer
       = link_to '編集', edit_article_path(article), class: "btn btn-primary"
-      = link_to '削除', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"
+      = link_to '削除', article, method: :delete, data: { confirm: '削除してもよろしいですか?' }, class: "btn btn-danger"
 br
 = link_to '新規作成', new_article_path, class: "btn btn-primary"

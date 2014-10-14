@@ -1,0 +1,14 @@
+h1
+  | イベント情報
+- @events.each do |event|
+  .panel.panel-default
+    .panel-heading
+      h4
+        | #{event.id} : #{event.title}
+      br
+      | 作成者 : #{event.name}
+    .panel-body
+      = simple_format(event.body)
+    .panel-footer
+      | 
+  
