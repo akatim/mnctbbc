@@ -20,9 +20,14 @@ nav.navbar.navbar-default
           = link_to "掲示板", articles_path
 
       ul.nav.navbar-nav.navbar-right
-        li
-          - if user_signed_in?
-
+        - if user_signed_in?
+          li
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+        - else
+          li
+            = link_to "新規作成", new_user_registration_path
+          li
+            = link_to "ログイン", new_user_session_path
 
 .container
   .row
