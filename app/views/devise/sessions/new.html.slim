@@ -1,0 +1,18 @@
+h2
+  | ログイン
+
+= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  .form_group
+    = f.label :email
+      | Eメールアドレス
+    br
+    = f.email_field :email, autofocus: true
+
+  .form_group
+    = f.label :password
+      | パスワード
+    br
+    = f.password_field :password, autocomplete: "off"
+
+  br
+  = f.submit "ログイン", class: "btn btn-primary"

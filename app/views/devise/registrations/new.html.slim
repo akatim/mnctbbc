@@ -1,0 +1,35 @@
+h2
+  | ユーザ新規作成
+
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = devise_error_messages!
+
+  .form_group
+    = f.label :name
+      | 名前
+    br
+    = f.text_field :name, autofocus: true
+
+  .form_group
+    = f.label :email
+      | Eメールアドレス
+    br
+    = f.email_field :email
+
+  .form_group
+    = f.label :password
+      | パスワード
+    - if @validatable
+      | (#{@minimum_password_length} 文字以上)
+    br
+    = f.password_field :password, autocomplete: "off"
+
+  .form_group
+    = f.label :password_confirmation
+      | 確認用パスワード
+    br
+    = f.password_field :password_confirmation, autocomplete: "off"
+
+  br
+  = f.submit "新規登録", class: "btn btn-primary"
+
