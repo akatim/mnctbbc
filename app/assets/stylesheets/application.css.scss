@@ -1,2 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar-brand {
+  background-image: image-url("top_logo.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 100px
+}
