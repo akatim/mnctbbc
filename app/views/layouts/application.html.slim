@@ -36,9 +36,8 @@ nav.navbar.navbar-default
     - flash.each do |key, value|
       - status = key == :notice ? "success" : "danger"
       = content_tag(:div, value, class: "alert alert-#{status}")
-    .col-md-10
+    .col-md-12
       = yield
-    .col-md-2
       
 .footer
   .navbar.navbar-default.navbar-fixed-bottom

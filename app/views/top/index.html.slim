@@ -7,12 +7,40 @@ javascript:
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-.col-md-9
+#carousel-example-generic.carousel.slide data-ride="carousel"
+  ol.carousel-indicators
+    li.active data-target="#carousel-example-generic" data-slide-to="0"
+    li data-target="#carousel-example-generic" data-slide-to="1"
+    li data-target="#carousel-example-generic" data-slide-to="2"
+    li data-target="#carousel-example-generic" data-slide-to="3"
+    li data-target="#carousel-example-generic" data-slide-to="4"
+
+  .carousel-inner role="listbox"
+    .item.active
+      = image_tag "top_slide_1.jpg", class: "img-responsive"
+    .item
+      = image_tag "top_slide_2.jpg", class: "img-responsive"
+    .item
+      = image_tag "top_slide_3.jpg", class: "img-responsive"
+    .item
+      = image_tag "top_slide_4.jpg", class: "img-responsive"
+    .item
+      = image_tag "top_slide_5.jpg", class: "img-responsive"
+
+  a href="#carousel-example-generic" class="left carousel-control" role="button" data-slide="prev"
+    span.glyphicon.glyphicon-chevron-left
+    span.sr-only
+      | Previous
+  a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"
+    span.glyphicon.glyphicon-chevron-right
+    span.sr-only
+      | Next
+.col-md-8
   h1
     | ようこそ宮城高専吹奏楽部OB会へ
   p
     | 本サイトは、宮城工業高等専門学校(現 仙台工業高等専門学校 名取キャンパス)の吹奏楽部のOB、OGのためのサイトです。
   p
     | イベント情報の更新をお手伝いして頂ける方募集中です。ご協力頂ける方はご連絡ください。
-.col-md-3
+.col-md-4
   .fb-like-box data-href="https://www.facebook.com/mnctbbc" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"
