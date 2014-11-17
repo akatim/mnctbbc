@@ -32,6 +32,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'devise'
+gem 'paperclip'
 
 
 # Use sqlite3 as the database for Active Record

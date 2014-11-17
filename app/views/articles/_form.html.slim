@@ -10,17 +10,23 @@
           li
             = message
 
-  .field
+  .input_group
     = f.label :title, "タイトル"
     br
-    = f.text_field :title
+    = f.text_field :title, class: "form-control"
   .field
     = f.label :name, "投稿者"
     br
-    = f.text_field :name
+    = f.text_field :name, class: "form-control"
   .field
     = f.label :body, "本文"
     br
-    = f.text_area :body
+    = f.text_area :body, class: "form-control", rows: "10"
+  .field
+    = f.label :image, "添付画像"
+    br
+    = f.file_field :image
+  br
+  br
   .actions
     = f.submit "投稿", class: "btn btn-primary"
