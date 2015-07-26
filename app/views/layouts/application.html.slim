@@ -9,7 +9,7 @@ html
     
   meta name="keywords" content="宮城高専 仙台高専 吹奏楽 OB OG"
 
-nav.navbar.navbar-default
+//nav.navbar.navbar-default
   .container-fluid
     .navbar-header
       = link_to "", root_path, class: "navbar-brand"
@@ -19,7 +19,6 @@ nav.navbar.navbar-default
           = link_to "イベント情報", events_path
         li
           = link_to "掲示板", articles_path
-
       ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           li
